@@ -25,7 +25,7 @@
 	}
 	.menu{
 		@include flex-row(space-between, center);
-		@media screen and (max-width: 717px) {
+		@media handheld{
 			display: none;
 		}
 		ul{
