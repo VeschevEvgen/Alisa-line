@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+// *,
+// &:before,
+// &:after {
+//     box-sizing: inherit;
+// }
+
+body {
+    margin: 0;
+}
+
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }
+
+.wrapper {
+	overflow: hidden;
+	display: block;
+	max-width: 940px;
+	margin: 0 auto;
+}
+// .footer {
+// 	display: table-footer-group;
+// 	height: 1%;
+// }
+
+// .container {
+// 	margin: auto;
+// 	max-width: $container-width;
+// 	padding: 0 $container-gutter;
+// }

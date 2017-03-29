@@ -1,0 +1,102 @@
+.header{
+	background: $main-bg-gradient;
+	@include flex-row(space-between, center);
+	opacity: 0.85;
+	overflow: hidden;
+	padding: 0 10px;
+	.logo{
+		margin: -20px 0 ;
+		svg{
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			&:hover {
+				path:nth-child(3),
+				path:nth-child(4){
+					fill: yellow;
+				}
+				path:nth-child(2),
+				path:nth-child(5){
+					fill: blue;
+				}
+			}
+			
+		}
+	}
+	.menu{
+		@include flex-row(space-between, center);
+		@media screen and (max-width: 717px) {
+			display: none;
+		}
+		ul{
+			@include flex-row(space-between, center);
+			margin: 0;
+			padding: 0;
+			li{
+				list-style: none;
+				margin: 5px;
+				
+				// padding: 10px 0;
+				a{
+					color: $inverse-color;
+					text-decoration: none;
+					font-family: Roboto;
+					font-size: 13px;
+					font-weight: 900;
+					text-transform: uppercase;
+					padding: 5px 10px;
+					border: 1px solid transparent;
+					border-radius: 5px;
+				}
+				&:hover a, &.activ a{
+					color: $main-color;
+					border: 1px solid $main-color;
+					border-radius: 5px;
+				}				
+			}
+		}
+	}
+	.telephone{
+		@include flex-col(center, stretch);
+		color: $inverse-color;
+		ul{
+			@include flex-col(space-between, stretch);
+			padding-left: 0;
+			margin: 0;
+			li{
+				list-style: none;
+				a{
+					color: $inverse-color;
+					
+				}
+				&:before{
+					content: '';
+					display: inline-block;
+					height: 15px;
+					width: 15px;
+					background-image: url("../img/phone.gif");
+					background-size: cover;
+					margin-right: 3px;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+}
+.gradient {
+	background: #6cb0f0;
+	background: -moz-linear-gradient(top, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(3,67,135,1)), color-stop(100%, rgba(108,176,240,1)));
+	background: -webkit-linear-gradient(top, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -o-linear-gradient(top, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -ms-linear-gradient(top, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: linear-gradient(to bottom, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034387', endColorstr='#6cb0f0', GradientType=0 );
+}
+
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+	.gradient {
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4bb2da",endColorstr="#ff036078",GradientType=0);
+	}
+}

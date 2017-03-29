@@ -1,0 +1,72 @@
+.footer{
+	background: $main-bg-gradient;
+	@include flex-row(space-around, center);
+	opacity: 0.85;
+	overflow: hidden;
+	padding: 0 10px;
+	.logo{
+		margin: -20px 0 ;
+		svg{
+			width: 50px;
+			height: 50px;
+			margin: 10px;
+			&:hover {
+				path:nth-child(3),
+				path:nth-child(4){
+					fill: yellow;
+				}
+				path:nth-child(2),
+				path:nth-child(5){
+					fill: blue;
+				}
+			}
+			
+		}
+	}
+	.telephone{
+		@include flex-row(center, stretch);
+		color: $inverse-color;
+		width: 70%;
+		ul{
+			@include flex-row(space-around, flex-start);
+			padding-left: 0;
+			margin: 0;
+			width: 700px;
+			li{
+				list-style: none;
+				display: inline-block;
+				a{
+					color: $inverse-color;
+					
+				}
+				&:before{
+					content: '';
+					display: inline-block;
+					height: 15px;
+					width: 15px;
+					background-image: url("../img/phone.gif");
+					background-size: cover;
+					margin-right: 3px;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+}
+.grad {
+	background: #6cb0f0;
+	background: -moz-linear-gradient(bottom, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -webkit-gradient(left bottom, left bottom, color-stop(0%, rgba(3,67,135,1)), color-stop(100%, rgba(108,176,240,1)));
+	background: -webkit-linear-gradient(bottom, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -o-linear-gradient(bottom, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: -ms-linear-gradient(bottom, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	background: linear-gradient(to top, rgba(3,67,135,1) 0%, rgba(108,176,240,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#034387', endColorstr='#6cb0f0', GradientType=0 );
+}
+
+/* IE8- CSS hack */
+@media \0screen\,screen\9 {
+	.gradient {
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4bb2da",endColorstr="#ff036078",GradientType=0);
+	}
+}
